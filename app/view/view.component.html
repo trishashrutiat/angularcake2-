@@ -1,0 +1,23 @@
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Password</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of sList">
+        <td>{{ s.name }}</td>
+        <td>{{ s.username }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.phone }}</td>
+        <td>{{ s.password }}</td>
+        <td>{{ s.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,53 @@
+
+    <body>
+        <div class="box">
+            <div class="container">
+                <div class="top">
+                <h1>
+                <span> B</span>
+                <span> e</span>
+                <span> l</span>
+                <span> s</span>
+                <span>i</span>
+                <span> n</span>
+                <span> g</span>
+                <span> h</span>
+                <span>  B</span>
+                <span> a</span>
+                <span> k</span>
+                <span> e</span>
+                </h1>
+                
+                </div>
+                
+                <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+            <div class="input_box">
+                <input type="uname" name="username" class="user-name" placeholder="USERNAME" ngModel #username="ngModel">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" name="password" class="pass" ngModel #password="ngModel" placeholder="PASSWORD">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input_box">
+                <input type="submit" name="pass" class="login" value="Login">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">Remember Me</label>
+                </div>
+                <div class="two">
+                    <label for="" class="forget"><a routerLink="/register">Dont have Account?</a>
+                        <a routerLink="/forgetpass">Forget Password</a>
+                    </label>
+                </div>
+            </div>
+            </form>
+            </div>
+
+
+        </div>
+        
+    </body>    

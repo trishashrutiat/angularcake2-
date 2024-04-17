@@ -1,0 +1,53 @@
+
+<body>
+    <div class="Container">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <h2>Havent Tasted Yet?</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" ngModel #name="ngModel" id="nam" placeholder="Enter full name" required>
+                    <span class="error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="name" ngModel #uname="ngModel" name="uname" placeholder="Enter username"  required>
+                     <span class="error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" ngModel #email="ngModel" name="email" placeholder="Enter your valid email address" required>
+                    <span class="error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" placeholder="Enter phone number" ngModel #phone="ngModel" name="phone" id="Phone_number" required>
+                    <span class="error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your new password" ngModel #password="ngModel" name="password" required>
+                    <span class="error"></span>
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password" id="confirm_password"  name="cpassword" required>
+                    <span class="error"></span>
+                </div>
+              
+            </div>
+            <div class="input-box gender-category">
+                <span class="gender-title">Gender</span>
+                <label><input type="radio" name="gender" ngModel #gender="ngModel" value="male">Male</label>
+                <label><input type="radio" name="gender" ngModel #gender="ngModel" value="female">Female</label>
+                <label><input type="radio" name="gender" ngModel #gender="ngModel" value="other">Other</label>
+                <span class="error"></span>
+            </div>
+           
+            <div class="button-container"> 
+                <button type="submit" >Ready to Taste!! </button>
+            </div>
+        </form>
+        
+    </div>
+</body>

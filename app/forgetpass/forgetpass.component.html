@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Are you sure you want to Reset Password?</h1>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <label for="email">Enter your email to confirm:</label>
+    <input type="email" id="email" name="email" ngModel required> <!-- Removed unnecessary local template variables -->
+    <label for="l1">Enter old password:</label>
+    <input type="password" id="l1" name="password" ngModel required>
+    <label for="l2">Enter new password:</label>
+    <input type="password" id="l2" name="npassword" ngModel required> <!-- Changed 'password' to 'npassword' -->
+    <button type="submit">Reset </button>
+  </form>
+</div>

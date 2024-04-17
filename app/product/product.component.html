@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container">
+    
+
+    <div class="row">
+      <ng-container *ngFor="let cake of cakeList ">
+        <div class="card col-md-3">
+          <img src="{{cake.image}}" alt="">
+          <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{cake.name}}</h5>
+          <div class="product-rating-container">
+            <img class="product-rating-stars" [src]="'../../assets/img/ratings/rating-' + (cake.rating.stars * 10) + '.png'">
+            <div class="product-rating-count link-primary">
+              {{cake.rating.count}}
+              <div class="product-quantity-container">
+                <select [(ngModel)]="cake.quantity" (change)="addtocart(cake, cake.quantity)">
+                  <option *ngFor="let quantity of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [value]="quantity">{{quantity}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <p><strong>Price:</strong> RS.{{cake.priceCents}}</p>
+          <button class="btn btn-primary" (click)="addtocart(cake, cake.quantity)" >Add to cart</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  
